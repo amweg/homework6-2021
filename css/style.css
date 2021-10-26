@@ -90,21 +90,20 @@ header{
         display:flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
     body>header{
         position: sticky;
-        top: 0;
         width: 100%;
+        top: 0;
+        margin: 0;
+        left: 0;
     }
 
     .nav_links{
         display: flex;
         flex-direction: row;
-        align-self: center;
-    }
-
-    nav{
         align-self: center;
     }
 
