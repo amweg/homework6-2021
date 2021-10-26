@@ -1,0 +1,126 @@
+body{
+    font-family: "Alegreya Sans SC", serif;
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+.skip a:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#logo{
+    object-fit: contain;
+    animation-name: logo;
+    animation-duration: 5s;
+}
+
+@keyframes logo{
+    from{width: 50px; opacity: 0; }
+    to{width: 425px; opacity: 1; }
+}
+
+.nav_item a:visited{
+    color:#0000ff;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card{
+    flex-basis: 450px;
+}
+
+.card>header{
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding: 20px 0;
+    border-radius: 7px 7px 0 0;
+}
+
+.pricing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}    
+
+.gallery>img{
+    border: solid 10px #50C7C7;
+    margin: 10px;
+    width: 300px;
+    align-self: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.gallery{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (min-width: 850px){
+    header{
+        display:flex;
+        align-items: flex-start;
+    }
+
+    body>header{
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+    }
+
+    nav{
+        display: flex;
+        align-self: flex-end;
+    }
+    .card{
+        display: flex;
+        flex-basis: 250px;
+        flex-direction: column;
+    }
+
+    .pricing{
+        display:flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{
+        animation: none;
+    }
+}
